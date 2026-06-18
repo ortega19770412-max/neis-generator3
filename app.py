@@ -149,7 +149,8 @@ class Handler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     server_address = ('', PORT)
-    httpd = HTTPServer(server_address, Handler) # NEISHandler -> Handler로 수정됨
+    httpd = HTTPServer(server_address, Handler) # 반드시 Handler여야 합니다.
     print(f"Server started on port {PORT}")
     httpd.serve_forever()
+
 
